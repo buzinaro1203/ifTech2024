@@ -1,0 +1,46 @@
+body {
+  background: rgb(45, 211, 111);
+  height: 100vh;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 10vh;
+  .logo {
+    float: left;
+    padding: 12px;
+  }
+  .links {
+    float: right;
+    padding: 3.5vh;
+  }
+  .links-content {
+    padding: 1vh;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  .logo img {
+    height: 10vh;
+  }
+  svg {
+    .st5 {
+      fill: #2f9e41;
+    }
+    .st6 {
+      fill: #ce181e;
+    }
+    text {
+      fill: #fff;
+    }
+  }
+}

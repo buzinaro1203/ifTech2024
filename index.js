@@ -1,4 +1,3 @@
-
 firebase.auth().onAuthStateChanged(user => {
 	if (user) {
 		// User is signed in.
@@ -6,17 +5,17 @@ firebase.auth().onAuthStateChanged(user => {
 	}
 })
 
-function onChangeEmail() {
+window.onChangeEmail = () => {
 	toggleButtonsDisable();
 	toggleEmailErrors();
 }
 
-function onChangePassword() {
+window.onChangePassword = () => {
 	toggleButtonsDisable();
 	togglePasswordErrors();
 }
 
-function login() {
+window.login = () => {
 	showLoading();
 	firebase.auth().signInWithEmailAndPassword(
 		form.email().value, form.password().value
@@ -40,11 +39,11 @@ function getErrorMessage(error) {
 	return error.message;
 }
 
-function register() {
+window.register = () => {
 	window.location.href = "pages/register/register.html";
 }
 
-function recoverPassword() {
+window.recoverPassword = () => {
 	showLoading();
 	firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
 		hideLoading();
@@ -93,4 +92,5 @@ const form = {
 	password: () => document.getElementById("password"),
 	passwordRequiredError: () => document.getElementById("password-required-error"),
 	recoverPasswordButton: () => document.getElementById("recover-password-button"),
-} 
+}
+

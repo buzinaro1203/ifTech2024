@@ -1,28 +1,31 @@
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
-    window.location.href = "pages/home/home.html";
+    window.location.href = "../home/home.html";
   }
 })
-function onChangeEmail() {
+window.onChangeEmail = () => {
   const email = document.getElementById("email").value;
   form.emailRequiredError().style.display = email ? "none" : "block";
   form.emailInvalidError().style.display = validateEmail(email) ? "none" : "block";
   toggleRegisterButtonDisable()
 
 }
-function onChangePassword() {
+window.onChangePassword = () => {
   const password = document.getElementById("password").value;
   form.passwordRequiredError().style.display = password ? "none" : "block";
 
   form.passwordMinLengthError().style.display = password.length >= 6 ? "none" : "block";
   toggleRegisterButtonDisable()
 }
-function onChangeConfirmPassword() {
+window.onChangeConfirmPassword = () => {
   const confirmPassword = document.getElementById("confirmPassword").value;
   const password = document.getElementById("password").value;
 
   form.confirmPasswordDoesntMatchError().style.display = password == confirmPassword ? "none" : "block";
   toggleRegisterButtonDisable()
+}
+window.backToLogin = () => {
+  window.location.href = "../../index.html";
 }
 function toggleRegisterButtonDisable() {
   form.registerButton().disabled = !isFormValid();
@@ -48,7 +51,7 @@ function isFormValid() {
 }
 
 
-function register() {
+window.register = () => {
   showLoading()
   const email = form.email().value;
   const password = form.password().value;

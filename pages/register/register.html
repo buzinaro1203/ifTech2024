@@ -2,11 +2,11 @@
 <html>
   <head>
     <title>Registrar</title>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
     <script type="module" src="../../firebase-init.js"></script>
-    <script type="module" src="/pages/register/register.js"></script>
+
+    <script type="module" src="register.js"></script>
     <script src="../../validations.js"></script>
 
     <script src="../../loading.js"></script>
@@ -62,7 +62,9 @@
         >
           Registrar
         </button>
-        <button type="button" class="clear">Login</button>
+        <button type="button" class="clear" onclick="backToLogin()">
+          Login
+        </button>
       </div>
     </form>
   </body>

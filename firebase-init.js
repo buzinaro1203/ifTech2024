@@ -12,6 +12,7 @@ import { } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+console.log('firebase called')
 const firebaseConfig = {
   apiKey: "AIzaSyDTNhFE-13RSjXkqXkySnt4gNqoOPXmph8",
   authDomain: "phmeter-83d7e.firebaseapp.com",

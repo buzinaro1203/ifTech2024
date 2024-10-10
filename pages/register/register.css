@@ -13,6 +13,48 @@ button {
   margin-bottom: 10px;
 }
 
+.container {
+  box-shadow: 0px 20px 20px 15px rgba(0, 0, 0, 0.4);
+  margin-top: 10vh;
+  padding: 5vh;
+  background-color: #e3e3e3;
+  border: solid 1px;
+}
+
 .form-field {
-  margin-bottom: 10px;
+  input {
+    box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    border: solid 1px;
+    margin-top: 5px;
+  }
+}
+.clear-button {
+  background: #2f9e41;
+  color: white;
+
+  border: solid 1px #2f9e41;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.clear-button:hover {
+  background: transparent;
+  color: #2f9e41;
+}
+
+span {
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.outline-button {
+  background: transparent;
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.outline-button:hover {
+  background: #2f9e41;
+  color: white;
 }

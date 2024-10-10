@@ -12,61 +12,137 @@
     <script src="../../loading.js"></script>
   </head>
 
-  <body class="centralize">
-    <form>
-      <div>
-        <div class="form-field"><label>Email</label></div>
-        <input
-          id="email"
-          type="email"
-          placeholder="seu@email.com"
-          onchange="onChangeEmail()"
-        />
-        <div class="error" id="email-required-error">Email é obrigatório</div>
-        <div class="error" id="email-invalid-error">Email é inválido</div>
-      </div>
-      <div>
-        <div class="form-field"><label for="senha">Senha</label></div>
-        <input
-          id="password"
-          type="password"
-          placeholder="senha"
-          onchange="onChangePassword()"
-        />
-        <div class="error" id="password-required-error">
-          Senha é obrigatória
-        </div>
-        <div class="error" id="password-min-length-error">
-          Senha deve possuir pelo menos 6 caracteres
-        </div>
-      </div>
-      <div>
-        <div class="form-field"><label for="">Confirmar senha</label></div>
-        <input
-          id="confirmPassword"
-          type="password"
-          placeholder="confirme sua senha"
-          onchange="onChangeConfirmPassword()"
-        />
-        <div class="error" id="password-doesnt-match-error">
-          Senha e Confirmar senha devem ser iguais
-        </div>
-      </div>
-      <div>
-        <button
-          id="registerButton"
-          type="button"
-          class="solid"
-          disabled="true"
-          onclick="register()"
+  <body>
+    <header>
+      <div class="logo">
+        <svg
+          id="marca-ifpr"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 235 54"
+          role="img"
+          aria-label="[title + description]"
+          width="100%"
         >
-          Registrar
-        </button>
-        <button type="button" class="clear" onclick="backToLogin()">
-          Login
-        </button>
+          <title>Instituto Federal do Paraná</title>
+          <desc>Marca do IFPR</desc>
+          <path
+            class="st5"
+            d="M37.4 36.4c0 0.6-0.5 1.1-1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1.1v-8.7c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V36.4z"
+          ></path>
+          <path
+            class="st5"
+            d="M24.4 10.3c0 0.6-0.5 1.1-1.1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1.1V1.6c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V10.3z"
+          ></path>
+          <path
+            class="st5"
+            d="M37.4 10.3c0 0.6-0.5 1.1-1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1.1V1.6c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V10.3z"
+          ></path>
+          <path
+            class="st5"
+            d="M11.4 23.3c0 0.6-0.5 1.1-1.1 1.1H1.6c-0.6 0-1-0.5-1-1v-8.7c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V23.3z"
+          ></path>
+          <path
+            class="st5"
+            d="M24.4 23.3c0 0.6-0.5 1.1-1.1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1v-8.7c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V23.3z"
+          ></path>
+          <path
+            class="st5"
+            d="M11.4 36.4c0 0.6-0.5 1.1-1.1 1.1H1.6c-0.6 0-1-0.5-1-1.1v-8.7c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V36.4z"
+          ></path>
+          <path
+            class="st5"
+            d="M24.4 36.4c0 0.6-0.5 1.1-1.1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1.1v-8.7c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V36.4z"
+          ></path>
+          <path
+            class="st5"
+            d="M11.4 49.4c0 0.6-0.5 1.1-1.1 1.1H1.6c-0.6 0-1-0.5-1-1.1v-8.7c0-0.6 0.5-1 1.1-1h8.7c0.6 0 1.1 0.5 1.1 1.1V49.4z"
+          ></path>
+          <path
+            class="st5"
+            d="M24.4 49.4c0 0.6-0.5 1.1-1.1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1.1v-8.7c0-0.6 0.5-1 1.1-1h8.7c0.6 0 1.1 0.5 1.1 1.1V49.4z"
+          ></path>
+          <path
+            class="st6"
+            d="M11.9 6c0 3.3-2.7 6-6 6C2.7 11.9 0 9.3 0 6S2.7 0 6 0C9.3 0 11.9 2.7 11.9 6"
+          ></path>
+          <text transform="matrix(1.0017 0 0 1 43.6553 24.1582)">
+            <tspan class="st0">INSTITUTO FEDERAL</tspan>
+          </text>
+          <text transform="matrix(1.0017 0 0 1 43.9331 37.5249)" class="st1">
+            Paraná
+          </text>
+          <text transform="matrix(1.0017 0 0 1 43.9326 50.5059)" class="st2">
+            Campus Paranavaí
+          </text>
+        </svg>
       </div>
-    </form>
+    </header>
+    <div class="centralize">
+      <div class="container">
+        <form>
+          <div>
+            <div class="form-field">
+              <label>Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="seu@email.com"
+                onchange="onChangeEmail()"
+              />
+              <div class="error" id="email-required-error">
+                Email é obrigatório
+              </div>
+              <div class="error" id="email-invalid-error">Email é inválido</div>
+            </div>
+          </div>
+          <div>
+            <div class="form-field">
+              <label for="senha">Senha</label>
+              <input
+                id="password"
+                type="password"
+                placeholder="senha"
+                onchange="onChangePassword()"
+              />
+              <div class="error" id="password-required-error">
+                Senha é obrigatória
+              </div>
+              <div class="error" id="password-min-length-error">
+                Senha deve possuir pelo menos 6 caracteres
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="form-field">
+              <label for="">Confirmar senha</label>
+              <input
+                id="confirmPassword"
+                type="password"
+                placeholder="confirme sua senha"
+                onchange="onChangeConfirmPassword()"
+              />
+              <div class="error" id="password-doesnt-match-error">
+                Senha e Confirmar senha devem ser iguais
+              </div>
+            </div>
+          </div>
+          <div>
+            <button
+              id="registerButton"
+              type="button"
+              class="outline-button"
+              disabled="true"
+              onclick="register()"
+            >
+              <span> Registrar</span>
+            </button>
+            <button type="button" class="clear-button" onclick="backToLogin()">
+              <span>Login</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 
   <link rel="stylesheet" href="../../global.css" />

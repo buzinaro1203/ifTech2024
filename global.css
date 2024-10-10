@@ -2,6 +2,30 @@ body {
   margin: 0;
 }
 
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 10vh;
+  .logo {
+    float: left;
+    padding: 12px;
+  }
+  .logo img {
+    height: 10vh;
+  }
+  svg {
+    .st5 {
+      fill: #2f9e41;
+    }
+    .st6 {
+      fill: #ce181e;
+    }
+    text {
+      fill: #fff;
+    }
+  }
+}
+
 .centralize {
   display: flex;
   justify-content: center;
@@ -55,7 +79,8 @@ button[disabled] {
 }
 
 .error {
-  background: red;
-  color: white;
+  background: transparent;
+  color: red;
   display: none;
+  text-decoration: underline;
 }

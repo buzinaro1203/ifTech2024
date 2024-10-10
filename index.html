@@ -12,62 +12,132 @@
     <script src="validations.js"></script>
     <script src="loading.js"></script>
   </head>
+  <body>
+    <header>
+      <div class="logo">
+        <svg
+          id="marca-ifpr"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 235 54"
+          role="img"
+          aria-label="[title + description]"
+          width="100%"
+        >
+          <title>Instituto Federal do Paraná</title>
+          <desc>Marca do IFPR</desc>
+          <path
+            class="st5"
+            d="M37.4 36.4c0 0.6-0.5 1.1-1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1.1v-8.7c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V36.4z"
+          ></path>
+          <path
+            class="st5"
+            d="M24.4 10.3c0 0.6-0.5 1.1-1.1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1.1V1.6c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V10.3z"
+          ></path>
+          <path
+            class="st5"
+            d="M37.4 10.3c0 0.6-0.5 1.1-1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1.1V1.6c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V10.3z"
+          ></path>
+          <path
+            class="st5"
+            d="M11.4 23.3c0 0.6-0.5 1.1-1.1 1.1H1.6c-0.6 0-1-0.5-1-1v-8.7c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V23.3z"
+          ></path>
+          <path
+            class="st5"
+            d="M24.4 23.3c0 0.6-0.5 1.1-1.1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1v-8.7c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V23.3z"
+          ></path>
+          <path
+            class="st5"
+            d="M11.4 36.4c0 0.6-0.5 1.1-1.1 1.1H1.6c-0.6 0-1-0.5-1-1.1v-8.7c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V36.4z"
+          ></path>
+          <path
+            class="st5"
+            d="M24.4 36.4c0 0.6-0.5 1.1-1.1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1.1v-8.7c0-0.6 0.5-1.1 1.1-1.1h8.7c0.6 0 1.1 0.5 1.1 1.1V36.4z"
+          ></path>
+          <path
+            class="st5"
+            d="M11.4 49.4c0 0.6-0.5 1.1-1.1 1.1H1.6c-0.6 0-1-0.5-1-1.1v-8.7c0-0.6 0.5-1 1.1-1h8.7c0.6 0 1.1 0.5 1.1 1.1V49.4z"
+          ></path>
+          <path
+            class="st5"
+            d="M24.4 49.4c0 0.6-0.5 1.1-1.1 1.1h-8.7c-0.6 0-1.1-0.5-1.1-1.1v-8.7c0-0.6 0.5-1 1.1-1h8.7c0.6 0 1.1 0.5 1.1 1.1V49.4z"
+          ></path>
+          <path
+            class="st6"
+            d="M11.9 6c0 3.3-2.7 6-6 6C2.7 11.9 0 9.3 0 6S2.7 0 6 0C9.3 0 11.9 2.7 11.9 6"
+          ></path>
+          <text transform="matrix(1.0017 0 0 1 43.6553 24.1582)">
+            <tspan class="st0">INSTITUTO FEDERAL</tspan>
+          </text>
+          <text transform="matrix(1.0017 0 0 1 43.9331 37.5249)" class="st1">
+            Paraná
+          </text>
+          <text transform="matrix(1.0017 0 0 1 43.9326 50.5059)" class="st2">
+            Campus Paranavaí
+          </text>
+        </svg>
+      </div>
+    </header>
 
-  <body class="centralize">
-    <form>
-      <div class="form-field">
-        <div><label>Email</label></div>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="seu@email.com"
-          onchange="onChangeEmail()"
-        />
-        <div class="error" id="email-required-error">Email é obrigatório</div>
-        <div class="error" id="email-invalid-error">Email é inválido</div>
+    <div class="centralize">
+      <div class="container">
+        <form>
+          <div class="form-field">
+            <div><label>Email</label></div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="seu@email.com"
+              onchange="onChangeEmail()"
+            />
+            <div class="error" id="email-required-error">
+              Email é obrigatório
+            </div>
+            <div class="error" id="email-invalid-error">Email é inválido</div>
+          </div>
+          <div class="form-field">
+            <div><label>Senha</label></div>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Senha"
+              onchange="onChangePassword()"
+            />
+            <div class="error" id="password-required-error">
+              Senha é obrigatória
+            </div>
+          </div>
+          <div>
+            <button
+              type="button"
+              class="clear-button"
+              id="recover-password-button"
+              disabled="true"
+              onclick="recoverPassword()"
+            >
+              <span>Recuperar senha </span>
+            </button>
+          </div>
+          <div>
+            <button
+              type="button"
+              class="outline-button"
+              id="login-button"
+              disabled="true"
+              onclick="login()"
+            >
+              <span>Login</span>
+            </button>
+          </div>
+          <div>
+            <button type="button" class="outline-button" onclick="register()">
+              <span> Registrar</span>
+            </button>
+          </div>
+        </form>
       </div>
-      <div class="form-field">
-        <div><label>Senha</label></div>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Senha"
-          onchange="onChangePassword()"
-        />
-        <div class="error" id="password-required-error">
-          Senha é obrigatória
-        </div>
-      </div>
-      <div>
-        <button
-          type="button"
-          class="clear"
-          id="recover-password-button"
-          disabled="true"
-          onclick="recoverPassword()"
-        >
-          Recuperar senha
-        </button>
-      </div>
-      <div>
-        <button
-          type="button"
-          class="solid"
-          id="login-button"
-          disabled="true"
-          onclick="login()"
-        >
-          Entrar
-        </button>
-      </div>
-      <div>
-        <button type="button" class="outline" onclick="register()">
-          Registrar
-        </button>
-      </div>
-    </form>
+    </div>
   </body>
 
   <link rel="stylesheet" href="index.css" />

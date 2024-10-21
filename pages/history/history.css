@@ -1,0 +1,33 @@
+body {
+  background: rgb(45, 211, 111);
+  height: 100vh;
+}
+body {
+  background: rgb(45, 211, 111);
+  height: 100vh;
+}
+header {
+  .links {
+    float: right;
+    padding-top: 2.5vh;
+    padding-right: 2.5vh;
+  }
+  .links-content {
+    padding: 1vh;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+}
+.conteiner {
+  padding: 10vh;
+}

@@ -28,6 +28,15 @@ header {
     color: white;
   }
 }
-.conteiner {
-  padding: 10vh;
+
+table {
+  th {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+  }
 }

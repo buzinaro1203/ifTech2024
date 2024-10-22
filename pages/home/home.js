@@ -3,7 +3,6 @@ var datatest;
 var phValue;
 var timestamp;
 var id;
-
 window.registrarMedicao = () => {
 
   fetch("https://thingspeak.mathworks.com/channels/2682894/fields/1.json?results=1")
@@ -20,8 +19,9 @@ window.registrarMedicao = () => {
       phValue = data[0].field1;
       timestamp = data[0].created_at;
       id = data[0].entry_id;
-
+      showLoading();
       const medicao = {
+
         "phValue": phValue,
         "timestamp": timestamp,
         "tsID": id,
@@ -30,7 +30,14 @@ window.registrarMedicao = () => {
         }
 
       }
-      console.log(medicao);
+      firebase.firestore()
+        .collection('medicoes').add(medicoes).then(() => {
+          hideLoading();
+        }).catch(() => {
+          hideLoading();
+          alert("ERRO!");
+        })
+
 
     })
     .catch((error) =>
@@ -38,7 +45,6 @@ window.registrarMedicao = () => {
 
 
 }
-
 
 function logout() {
   showLoading();

@@ -2,7 +2,7 @@ var datatest;
 var phValue;
 var timestamp;
 var id;
-
+console.log('zzzz');
 window.registrarMedicao = () => {
   fetch("https://thingspeak.mathworks.com/channels/2682894/fields/1.json?results=1")
     .then((res) => {

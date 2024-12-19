@@ -70,6 +70,18 @@ button:active {
 button[disabled] {
   opacity: 0.8;
 }
+.clear-button {
+  background: #2f9e41;
+  color: white;
+
+  border: solid 1px #2f9e41;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.clear-button:hover {
+  background: transparent;
+  color: #2f9e41;
+}
 
 .clear {
   background: transparent;
@@ -92,4 +104,59 @@ button[disabled] {
   color: red;
   display: none;
   text-decoration: underline;
+}
+
+.links {
+  float: right;
+  padding-top: 2.5vh;
+  padding-right: 2.5vh;
+}
+
+.sidenav-button {
+  font-size: 30px;
+  cursor: pointer;
+  color: #e3e3e3;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #e3e3e3;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(45, 211, 111);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: rgb(20, 100, 52);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }

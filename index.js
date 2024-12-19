@@ -22,6 +22,7 @@ window.login = () => {
 	).then(response => {
 		hideLoading();
 		window.location.href = "pages/home/home.html";
+
 	}).catch(error => {
 		alert(getErrorMessage(error));
 		hideLoading();

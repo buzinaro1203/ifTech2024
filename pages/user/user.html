@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="../../global.css" />
-    <link rel="stylesheet" href="home.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuário</title>
+
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
     <script type="module" src="../../firebase-init.js"></script>
 
-    <script src="../../validations.js"></script>
-    <!-- <script type="" src="../../tsReadData.js"></script> -->
+    <link rel="stylesheet" href="../../global.css" />
+    <link rel="stylesheet" href="user.css" />
+
+    <script type="module" src="user.js"></script>
     <script src="../../loading.js"></script>
-    <script type="module" src="home.js"></script>
     <script src="../../global.js"></script>
   </head>
-
   <body>
     <header>
       <div class="logo">
@@ -98,20 +99,55 @@
       </div>
     </header>
 
-    <div class="conteiner centralize">
-      <div class="phChart">
-        <iframe
-          width="450"
-          height="260"
-          style="border: 1px solid #030303"
-          src="https://thingspeak.com/channels/2682894/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
-        ></iframe>
-
-        <div class="registerDataBtn">
-          <button class="solid" onclick="registrarMedicao()">
-            Registrar medição
-          </button>
+    <div class="centralize">
+      <div style="padding-top: 0" class="container">
+        <div class="wrapper centralize">
+          <h2>Informações da conta</h2>
         </div>
+        <div class="form-group">
+          <label class="infoLabel" for="userEmail">Email</label>
+          <input
+            readonly="readonly"
+            type="email"
+            class="form-control"
+            id="userEmail"
+          />
+        </div>
+        <div class="form-group">
+          <label class="infoLabel" for="userEmail">Nome</label>
+          <input type="text" class="form-control" id="userName" />
+        </div>
+        <div class="form-group">
+          <label class="infoLabel" for="userEmail">Ultimo nome</label>
+          <input type="text" class="form-control" id="userLastName" />
+        </div>
+        <button class="clear-button" onclick="updateName()">
+          Alterar nome
+        </button>
+        <form action="">
+          <h3 class="alterar-text centralize">Alterar senha</h3>
+          <div class="form-group">
+            <label class="infoLabel" for="userEmail">Senha</label>
+            <input
+              placeholder="Digite sua senha"
+              type="password"
+              class="form-control"
+              id="userPassword"
+            />
+          </div>
+          <div class="form-group">
+            <label class="infoLabel" for="userEmail"> Nova senha</label>
+            <input
+              placeholder="Digite sua nova senha"
+              type="password"
+              class="form-control"
+              id="newPassword"
+            />
+          </div>
+        </form>
+        <button class="clear-button" onclick="UpdatePassword()">
+          Alterar senha
+        </button>
       </div>
     </div>
   </body>

@@ -1,0 +1,19 @@
+body {
+  background: rgb(45, 211, 111);
+  height: 100vh;
+}
+.form-control {
+  background-color: #fff;
+  border: solid 2px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+
+  font-size: 15px;
+}
+
+.infoLabel {
+  margin: 0px 0px 7px 12px;
+}
+.alterar-text {
+  margin: 30px 0px 0px 0px;
+}

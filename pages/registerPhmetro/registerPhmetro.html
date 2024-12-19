@@ -1,22 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="../../global.css" />
-    <link rel="stylesheet" href="home.css" />
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
-    <script type="module" src="../../firebase-init.js"></script>
-
-    <script src="../../validations.js"></script>
-    <!-- <script type="" src="../../tsReadData.js"></script> -->
-    <script src="../../loading.js"></script>
-    <script type="module" src="home.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pHmetros</title>
     <script src="../../global.js"></script>
+    <link rel="stylesheet" href="../../global.css" />
+    <link rel="stylesheet" href="registerPhmetro.css" />
   </head>
-
   <body>
     <header>
       <div class="logo">
@@ -81,6 +72,7 @@
           </text>
         </svg>
       </div>
+
       <div class="links centralize">
         <div class="sidenav-open">
           <span class="sidenav-button" onclick="openNav()">&#9776;</span>
@@ -98,20 +90,14 @@
       </div>
     </header>
 
-    <div class="conteiner centralize">
-      <div class="phChart">
-        <iframe
-          width="450"
-          height="260"
-          style="border: 1px solid #030303"
-          src="https://thingspeak.com/channels/2682894/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
-        ></iframe>
-
-        <div class="registerDataBtn">
-          <button class="solid" onclick="registrarMedicao()">
-            Registrar medição
-          </button>
+    <div class="centralize">
+      <div class="container">
+        <h2>Registrar pHmetro</h2>
+        <div class="form-group">
+          <label for="prototipoId"> Insira o código do protótipo </label>
+          <input type="text" id="prototipoId" class="form-control" />
         </div>
+        <button class="clear-button">Registrar</button>
       </div>
     </div>
   </body>
